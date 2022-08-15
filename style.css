@@ -23,6 +23,9 @@
    list-style-type: none;
    color: var(--shadow-black);
 }
+img{
+   width: 100%;
+}
 .flex{
    display: flex;
    align-items: center;
@@ -53,6 +56,12 @@ header nav.nav-right img{
    width: 30px;
    aspect-ratio: 1/-1;
 }
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination{
+   z-index: 1;
+   color: var(--white);
+}
 main section:nth-child(2){
    padding-inline: 5%;
 }
@@ -60,6 +69,7 @@ main section:nth-child(2)> h1{
    color: var(--orange);
    font-size: .9rem;
    letter-spacing: .2em;
+   margin-top: 2em;
 }
 main section:nth-child(2) > h2{
    font-size: 2.3rem;
