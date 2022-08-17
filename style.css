@@ -188,9 +188,13 @@ main section:nth-child(2) div:nth-child(6) p{
    header > nav.nav-left > ul > li > a{
       color: var(--dark-grayish-blue);
       font-weight: initial;
+      font-size: 1.1rem;
+   }
+   header > nav.nav-left > ul > li > a:hover{
+      cursor: pointer;
    }
    header > nav.nav-right i{
-      font-size: 1.5em;
+      font-size: 1.5rem;
       margin-right: 1em;
    }
    header > nav.nav-right img{
