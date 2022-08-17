@@ -148,6 +148,9 @@ main section:nth-child(2) div:nth-child(6) p{
    color: var(--white);
    margin-inline: .2em;
 }
+main div.image-banner{
+   display: none;
+}
 @media all and (min-width: 500px){
    div.container,
    div.swiper,
@@ -203,5 +206,48 @@ main section:nth-child(2) div:nth-child(6) p{
    }
    main{
       justify-content: space-between;
+      flex-wrap: wrap;
+      padding-inline: 7.5%;
+   }
+   main div.container{
+      width: 50%;
+   }
+   main > div.container > div.swiper > div.swiper-wrapper > div.swiper-slide div.image-wrapper img{
+      width: 90px;
+      border-radius: 10px;
+   }
+   main > div.container > div.swiper > div.swiper-wrapper{
+      display: grid;
+      grid-template-areas: "box1 box2 box3 box4";
+      width: 90%;
+      margin-top: 1em;
+   }
+   main > div.container > div.swiper > div.swiper-wrapper div.swiper-slide:nth-child(1){
+      grid-area: 'box1';
+   }
+   main > div.container > div.swiper > div.swiper-wrapper div.swiper-slide:nth-child(2){
+      grid-area: "box2";
+   }
+   main > div.container > div.swiper > div.swiper-wrapper div.swiper-slide:nth-child(3){
+      grid-area: "box3";
+   }
+   main > div.container > div.swiper > div.swiper-wrapper div.swiper-slide:nth-child(4){
+      grid-area: "box4";
+   }
+   main section:nth-child(2){
+      width: 50%;
+      order: -1;
+      position: relative;
+      top: 1.2em;
+   }
+   main div.image-banner{
+      display: initial;
+      width: 425px;
+      height: 425px;
+      order: -2;
+      border-radius: 10px;
+   }
+   main div.image-banner img{
+      border-radius: 10px;
    }
 }
