@@ -76,7 +76,7 @@ header > nav.nav-left ul li a{
    font-size: 1.2rem;
 }
 header > nav.nav-left ul.slide{
-   transition: left .5s ease-in-out;
+   transition: left .3s ease-in-out;
    left: 0;
 }
 header >nav.nav-left ul li a{
@@ -85,10 +85,6 @@ header >nav.nav-left ul li a{
 header nav.nav-right img{
    width: 30px;
    aspect-ratio: 1/-1;
-}
-.swiper, 
-.swiper-wrapper{
-   z-index: -2;
 }
 .swiper-button-prev,
 .swiper-button-next,
@@ -151,4 +147,60 @@ main section:nth-child(2) div:nth-child(6) i,
 main section:nth-child(2) div:nth-child(6) p{
    color: var(--white);
    margin-inline: .2em;
+}
+@media all and (min-width: 500px){
+   div.container,
+   div.swiper,
+   div.swiper-wrapper,
+   div.swiper-slide{
+      all: unset;
+   }
+   div.swiper-pagination,
+   div.swiper-button-prev,
+   div.swiper-button-next{
+      display: none;
+   }
+   header{
+      padding-top: 1.2em;
+      padding-bottom: 1em;
+      padding-inline: 0;
+      border-bottom: 2px solid var(--dark-grayish-blue);
+      margin-bottom: 2.5em;
+   }
+   header > nav.nav-left > i{
+      display: none;
+   }
+   header > nav.nav-left > ul{
+      all: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: .9em;
+      margin-left: 1em;
+   }
+   header > nav.nav-left > ul > li{
+      margin-right: .7em;
+   }
+   header > nav.nav-left > ul > li > i{
+      display: none;
+   }
+   header > nav.nav-left > ul > li > a{
+      color: var(--dark-grayish-blue);
+      font-weight: initial;
+   }
+   header > nav.nav-right i{
+      font-size: 1.5em;
+      margin-right: 1em;
+   }
+   header > nav.nav-right img{
+      width: 50px;
+   }
+   header,
+   main{
+      margin-inline: 10%;
+   }
+   main{
+      justify-content: space-between;
+   }
 }
