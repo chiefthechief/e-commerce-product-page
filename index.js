@@ -34,6 +34,6 @@ img.src = './images/image-product-1.jpg';
 imageBanner.appendChild(img);
 bannerImages.forEach(element => {
    element.addEventListener('click', () => {
-   img.setAttribute('src', element.getAttribute('src'))
+   img.setAttribute('src', element.getAttribute('src'));
    })
 })
