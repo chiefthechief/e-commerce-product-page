@@ -240,6 +240,7 @@ main div.image-banner{
       order: -1;
       position: relative;
       top: 1.2em;
+      margin-bottom: initial;
    }
    main div.image-banner{
       display: initial;
