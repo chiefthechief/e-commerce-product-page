@@ -93,6 +93,7 @@ header nav.nav-right img{
 }
 main section:nth-child(2){
    padding-inline: 5%;
+   margin-botton: 2em;
 }
 main section:nth-child(2)> h1{
    color: var(--orange);
