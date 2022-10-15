@@ -44,8 +44,8 @@ bannerImages.forEach(element => {
 //ADDING CART FUNCTIONALITY
 increaseNumberofShoes.addEventListener('click', () => {
    shoesNumber += 1;
-   console.log(shoesNumber);
    numberofShoes.textContent = shoesNumber;
+   cartIndicator();
 })
 decreaseNumberofShoes.addEventListener('click', () => {
    if (shoesNumber === 0) {
@@ -53,6 +53,13 @@ decreaseNumberofShoes.addEventListener('click', () => {
    } else {
       shoesNumber -= 1;
    }
-   console.log(shoesNumber);
    numberofShoes.textContent = shoesNumber;
+   cartIndicator();
 })
+function cartIndicator() {
+   if (shoesNumber === 0) {
+      document.documentElement.style.setProperty('--hidden', 'none');
+   } else {
+      document.documentElement.style.setProperty('--hidden', 'initial');
+   }
+}
