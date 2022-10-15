@@ -9,6 +9,7 @@ const bannerImages = document.querySelectorAll('main > div.container > div.swipe
 const increaseNumberofShoes = document.querySelector('main > section:nth-child(2) > div:nth-child(5) > i:last-child');
 const decreaseNumberofShoes = document.querySelector('main > section:nth-child(2) > div:nth-child(5) > i:first-child');
 const numberofShoes = document.querySelector('main section:nth-child(2) > div:nth-child(5) > p');
+const addtoCart = document.querySelector('main section:nth-child(2) > div:nth-child(6)');
 let shoesNumber = 0;
 //SLIDER
 var swiper = new Swiper(".swiper", {
@@ -45,7 +46,7 @@ bannerImages.forEach(element => {
 increaseNumberofShoes.addEventListener('click', () => {
    shoesNumber += 1;
    numberofShoes.textContent = shoesNumber;
-   cartIndicator();
+   addtoCart.addEventListener('click', cartIndicator);
 })
 decreaseNumberofShoes.addEventListener('click', () => {
    if (shoesNumber === 0) {
@@ -54,7 +55,7 @@ decreaseNumberofShoes.addEventListener('click', () => {
       shoesNumber -= 1;
    }
    numberofShoes.textContent = shoesNumber;
-   cartIndicator();
+   addtoCart.addEventListener('click', cartIndicator);
 })
 function cartIndicator() {
    if (shoesNumber === 0) {
